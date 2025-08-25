@@ -9,9 +9,23 @@
 </head>
 
 <body style="background-image: url(../assets/images/nav-bg.png);">
-  <nav class="nav">
-    <div class="container border-bottom border-black-400 py-40  ">
-      <ul class="list-unstyled d-flex px-106 align-items-center justify-content-between">
+  <nav class="nav navbar position-relative">
+    <div class="container border-bottom border-black-400 py-md-40 py-3  ">
+      <div class="d-flex  justify-content-between px-12 w-100">
+        <img class="logo-mb d-block" src="../assets/images/nav-mb/logo-mb.png" alt="pig logo">
+        <button class="border-0 p-2" type="button" data-bs-toggle="collapse" href="#collapseExample" role="button"
+          aria-expanded="false" aria-controls="collapseExample"
+          style="background-image: url(../assets/images/nav-bg.png);" id="nav-toggle" onclick="switchBtn('show')">
+          <img src="../assets/images/nav-mb/menu.png" alt="menu button">
+        </button>
+        <button class="border-0 p-2 " type="button" data-bs-toggle="collapse" href="#collapseExample" role="button"
+          aria-expanded="false" aria-controls="collapseExample"
+          style="background-image: url(../assets/images/nav-bg.png);" id="nav-close" onclick="switchBtn('close')">
+          <img src="../assets/images/nav-mb/close-btn.png" alt="menu button">
+        </button>
+      </div>
+
+      <ul class="list-unstyled d-md-flex d-none px-106 align-items-center justify-content-between">
         <li class="py-3 px-4">
           <a href="#" class="text-dark text-decoration-none">
             命理知識
@@ -37,20 +51,64 @@
         </li>
       </ul>
     </div>
+    <div class="nav-collapse collapse  w-100 py-4 shadow position-absolute  left-0" id="collapseExample"
+      style="background-image: url(../assets/images/nav-bg.png);">
+      <div class="card card-body p-0 border-0" style="background-image: url(../assets/images/nav-bg.png);">
+        <ul class="list-unstyled text-center ">
+          <li class="py-3">
+            <a href="#" class="text-dark text-decoration-none">
+              命理知識
+            </a>
+          </li>
+          <li class="py-3">
+            <a href="#" class="text-dark text-decoration-none">
+              命理師介紹
+            </a>
+          </li>
+          <li class="py-3">
+            <a href="#" class="text-dark text-decoration-none">
+              立即預約
+            </a>
+          </li>
+          <li class="py-3">
+            <a href="#" class="text-dark text-decoration-none">
+              登入/註冊
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
 
   </nav>
 
+  <script>
+    const navToggle = document.getElementById("nav-toggle");
+    const closeBtn = document.getElementById("nav-close");
+    closeBtn.style.display='none';
+    function switchBtn(item) {
+      if (item === "show") {
+        navToggle.style.display = "none";
+        closeBtn.style.display = "block";
+      } else {
+        navToggle.style.display = "block";
+        closeBtn.style.display = "none";
+      }
+    }
+
+  </script>
+
   <footer class="footer">
-    <div class="container">
-      <div class="py-40 d-flex align-items-center gap-4 px-4">
-        <div class="footer-border-up-1 border border-black-400"></div>
-        <img class="footer-logo" src="../assets/images/logo.png" alt="pig logo">
-        <div class="footer-border-up-2 border border-black-400"></div>
-
-
-
+    <div class="container px-0 px-md-12">
+      <div class="py-md-40 pt-40 pb-4 border-bottom  d-flex align-items-center gap-4 px-md-4 border-black-400">
+        <div class="footer-border-up-1 border border-black-400 d-none d-block"></div>
+        <picture class="mx-auto"> 
+          <source class="footer-logo" class="logo-mb" srcset="../assets/images/logo.png" media="(min-width: 768px)">
+          <img  class="logo-mb  d-block" src="../assets/images/nav-mb/logo-mb.png" alt="pig-logo">
+        </picture>
+        <div class="footer-border-up-2 border border-black-400 d-none d-block"></div>
       </div>
-      <div class="d-flex py-40 gap-4">
+      <div class="d-flex py-40 gap-4 ">
         <div class="footer-item">
           <h5 class="fw-bold mb-28 text-center">關於我們</h5>
           <ul class="list-unstyled">

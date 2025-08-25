@@ -1,57 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
 
-    <h1 class="index-title">我是首頁</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+</head>
 
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/dog.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
+<body style="background-image: url(../assets/images/nav-bg.png);">
+  <nav class="nav">
+    <div class="container border-bottom border-black-400 py-40  ">
+      <ul class="list-unstyled d-flex px-106 align-items-center justify-content-between">
+        <li class="py-3 px-4">
+          <a href="#" class="text-dark text-decoration-none">
+            命理知識
+          </a>
+        </li>
+        <li class="py-3 px-4">
+          <a href="#" class="text-dark text-decoration-none">
+            命理師介紹
+          </a>
+        </li>
+        <li>
+          <img src="../assets/images/logo.png" alt="pig logo">
+        </li>
+        <li class="py-3 px-4">
+          <a href="#" class="text-dark text-decoration-none">
+            立即預約
+          </a>
+        </li>
+        <li class="py-3 px-4">
+          <a href="#" class="text-dark text-decoration-none">
+            登入/註冊
+          </a>
+        </li>
+      </ul>
     </div>
 
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
+  </nav>
 
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <footer class="footer">
+    <div class="container">
+      <div class="py-40 d-flex align-items-center gap-4 px-4">
+        <div class="footer-border-up-1 border border-black-400"></div>
+        <img class="footer-logo" src="../assets/images/logo.png" alt="pig logo">
+        <div class="footer-border-up-2 border border-black-400"></div>
+
+
+
+      </div>
+      <div class="d-flex py-40 gap-4">
+        <div class="footer-item">
+          <h5 class="fw-bold mb-28 text-center">關於我們</h5>
+          <ul class="list-unstyled">
+            <li class="text-center mb-4">FAQ</li>
+            <li class="text-center mb-4">顧客服務</li>
+            <li class="text-center ">聯絡我們</li>
+          </ul>
+        </div>
+        <div class="footer-item">
+          <h5 class="fw-bold mb-28 text-center">其它</h5>
+          <ul class="list-unstyled">
+            <li class="text-center mb-4">預約服務流程</li>
+            <li class="text-center mb-4">網站地圖</li>
+            <li class="text-center ">預約查詢</li>
+          </ul>
+        </div>
+        <div class="footer-center">
+          <p class="text-center text-primary fw-bold mb-12">
+            尋找答案的你，值得一場溫暖的命理對話。
+          </p>
+          <p class="text-center text-primary fw-bold mb-32">立即預約，給自己新的視野。</p>
+          <p class="text-center  fs-7 mb-12">09:00~22:00 / Mon-Sun (每月15號公休)</p>
+          <p class="text-center fs-7 mb-32">service@pigdaxian-service.com</p>
+          <h6 class="fs-7 mb-2 text-center fw-normal">付款方式</h6>
+          <img class="d-block mx-auto" src="../assets/images/pay.png" alt="pay">
+        </div>
+        <div class="px-36 flex-fill">
+          <p class="text-primary mb-12">訂閱電子報</p>
+          <div class="d-flex align-items-center mb-2">
+            <div class=" border-end-0 p-11 ps-2 border border-primary">
+              <img class="ic-mail" src="../assets/images/ic_mail.png" alt="icon mail">
+            </div>
+            <input class="input-email border border-start-0 border-primary w-100 bg-transparent py-12 " type="email"
+              placeholder="Enter Email">
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
-          </div>
+          <button type="button" class="btn btn-primary rounded-0 mb-36">
+            立即探索您專屬的服務
+          </button>
+          <ul class="list-unstyled d-flex gap-20">
+            <li class="p-2 footer-icon ">
+              <a href="#">
+                <img src="../assets/images/ic-fb.png" alt="icon fb">
+              </a>
+            </li>
+            <li class="p-2 footer-icon ">
+              <a href="#">
+                <img src="../assets/images/ic-line.png" alt="icon fb">
+              </a>
+            </li>
+            <li class="p-2 footer-icon ">
+              <a href="#">
+                <img src="../assets/images/ic-youtube.png" alt="icon fb">
+              </a>
+            </li>
+            <li class="p-2 footer-icon ">
+              <a href="#">
+                <img src="../assets/images/ic-ig.png" alt="icon fb">
+              </a>
+            </li>
+
+          </ul>
+
         </div>
       </div>
+      <div class="p-4 ">
+        <div class="border border-black-400"></div>
+      </div>
+      <div class="d-flex px-4  align-items-center justify-content-between">
+        <p class="mb-0">豬大仙的命理探險家俱樂部 版權所有</p>
+
+        <ul class="mb-0 d-flex list-unstyled align-items-center">
+          <li class="px-2 py-1">隱私權保護政策</li>
+          <li class="d-flex px-2">
+            <div class=" border border-primary footer-deco"></div>
+          </li>
+          <li class="px-2 py-1">免責聲明</li>
+          <li class="d-flex px-2">
+            <div class=" border border-primary footer-deco"></div>
+          </li>
+          <li class="px-2 py-1">網站使用條款</li>
+          <li class="d-flex px-2">
+            <div class=" border border-primary footer-deco"></div>
+          </li>
+          <li class="px-2 py-1">防詐騙聲明</li>
+        </ul>
+
+      </div>
     </div>
 
-    <%- include('./layout/footer'); -%>
+  </footer>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+
+
+  <script type="module" src="../main.js"></script>
+</body>
+
 </html>
